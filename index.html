@@ -1,38 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PASSV2 Medical Coding Practice</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        #quiz { display: none; margin-top: 20px; }
-        #options button { display: block; margin: 5px 0; padding: 10px; width: 100%; }
-        #timer { font-weight: bold; margin-bottom: 20px; }
-        input { padding: 10px; margin: 5px 0; width: 100%; }
-        button { padding: 10px; margin-top: 10px; width: 100%; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PASSV2 Medical Coding Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #00bcd4, #2196f3);
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+    h1 {
+      margin-top: 30px;
+      font-size: 24px;
+    }
+    .container {
+      background: white;
+      color: black;
+      width: 90%;
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin: 5px;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0b7dda;
+    }
+    #quiz {
+      display: none;
+      background: white;
+      color: black;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    #timer {
+      color: red;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    #options button {
+      display: block;
+      width: 100%;
+      margin: 8px 0;
+      text-align: left;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>PASSV2 Medical Coding Practice</h1>
+  <h1>PASSV2 Medical Coding Practice</h1>
 
-    <!-- Login / Signup Form -->
-    <div id="login">
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button onclick="login()">Login</button>
-        <button onclick="signup()">Sign Up</button>
-    </div>
+  <div id="login" class="container">
+    <input type="email" id="email" placeholder="Email" /><br />
+    <input type="password" id="password" placeholder="Password" /><br />
+    <button onclick="login()">Login</button>
+    <button onclick="signup()">Sign Up</button>
+  </div>
 
-    <!-- Quiz Section -->
-    <div id="quiz">
-        <div id="timer">Time left: 4h 0m 0s</div>
-        <h2 id="question"></h2>
-        <div id="options"></div>
-    </div>
+  <div id="quiz">
+    <div id="timer">⏳ Time left: 4h 0m 0s</div>
+    <h2 id="question">Loading question...</h2>
+    <div id="options"></div>
+  </div>
 
-    <!-- Firebase + App JS -->
-    <script type="module" src="app.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
