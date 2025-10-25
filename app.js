@@ -17,13 +17,40 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Sample quiz questions
-let questions = [
-  { q: "What is ICD-10-CM?", options: ["Diagnosis coding system","Procedure code","Drug name"], answer:0 },
-  { q: "How many chapters are in ICD-10-CM?", options:["20","21","18"], answer:1 }
-];
+// Replace YOUR_GEMINI_API_KEY_HERE with your actual Gemini API key
+const GEMINI_API_KEY = "passv2-gemini-key";
 
-let index=0, score=0, timeLeft=60, timer;
+/**
+ * Fetches CPC practice questions from Gemini AI for a given chapter
+ * Returns an array of questions: [{q:"Question text", options:["opt1","opt2","opt3"], answer:0}]
+ */
+async function fetchQuestions(chapter = "Chapter 1") {
+    const prompt = `Generate 5 multiple-choice CPC practice questions for ${chapter}.
+Include question text, 3 options, and correct answer index (0,1,2).
+Return JSON like: [{ "q": "Question text", "options": ["opt1","opt2","opt3"], "answer": 0 }]`;
+
+    try {
+        const response = await fetch(
+            "https://api.generativeai.google/v1beta2/models/text-bison-001:generate",
+            {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${GEMINI_API_KEY}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ prompt: prompt, maxOutputTokens: 500 })
+            }
+        );
+
+        const data = await response.json();
+        // Gemini returns text, so parse JSON from the response text
+        return JSON.parse(data.output_text);
+    } catch (err) {
+        console.error("Error fetching questions from Gemini:", err);
+        return [];
+    }
+}
+
 
 // SIGN UP function
 async function signup() {
