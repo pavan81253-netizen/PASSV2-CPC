@@ -1,11 +1,11 @@
 // ----------------------
 // Global variables
 // ----------------------
-let questions = [];         // will be filled dynamically from Gemini
-let index = 0;              // current question index
-let score = 0;              // user score
-let timeLeft = 14400;       // 4 hours in seconds
-let timer;                  // countdown timer
+let questions = [];       // will be filled dynamically from Gemini
+let index = 0;            // current question index
+let score = 0;            // user score
+let timeLeft = 14400;     // 4 hours in seconds
+let timer;                // countdown timer
 
 // ----------------------
 // Firebase configuration
@@ -19,7 +19,8 @@ const firebaseConfig = {
   projectId: "passv2-assessment-app-484cc",
   storageBucket: "passv2-assessment-app-484cc.firebasestorage.app",
   messagingSenderId: "814919410709",
-  appId: "1:814919410709:web:017f29a9088e69c37c9a1c"
+  appId: "1:814919410709:web:017f29a9088e69c37c9a1c",
+  measurementId: "G-69EDH4FLBL"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -46,7 +47,7 @@ async function login() {
     await signInWithEmailAndPassword(auth, email, password);
     document.getElementById("login").style.display = "none";
     document.getElementById("quiz").style.display = "block";
-    fetchQuestionsFromGemini(); // Fetch 100 chapter 1 questions
+    fetchQuestionsFromGemini(); // Fetch chapter 1 questions
   } catch (error) {
     alert("Error: " + error.message);
   }
@@ -58,7 +59,6 @@ async function login() {
 function startQuiz() {
   index = 0;
   score = 0;
-
   timer = setInterval(() => {
     timeLeft--;
     let hours = Math.floor(timeLeft / 3600);
@@ -112,27 +112,21 @@ async function fetchQuestionsFromGemini() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer AIzaSyBIilgDkFBoCCD6xPvowCx2QC8zdbVrNm0"
+          "Authorization": "Bearer AIzaSyBIilgDkFBoCCD6xPvowCx2QC8zdbVrNm0" // Your Gemini API Key
         },
         body: JSON.stringify({
-          prompt: {
-            text: "Generate 100 CPC exam-style multiple choice questions (chapter 1) with 3 options each. Return a JSON array with 'q', 'options', 'answer' index."
+          "prompt": {
+            "text": "Generate 100 CPC exam-style multiple choice questions (chapter 1) with 3 options each. Return JSON array with 'q', 'options', 'answer' index."
           },
-          temperature: 0.7,
-          maxOutputTokens: 4000
+          "temperature": 0.7,
+          "maxOutputTokens": 5000
         })
       }
     );
 
     const data = await response.json();
-    // Parse safely
     questions = JSON.parse(data.candidates[0].content || "[]");
-
-    if (questions.length === 0) {
-      alert("No questions returned from Gemini.");
-    } else {
-      startQuiz();
-    }
+    startQuiz();
   } catch (error) {
     alert("Error fetching questions from Gemini: " + error.message);
   }
