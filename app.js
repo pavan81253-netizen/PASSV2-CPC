@@ -1,11 +1,11 @@
 // ----------------------
 // Global variables
 // ----------------------
-let questions = [];    // will be filled dynamically from Gemini
-let index = 0;         // current question index
-let score = 0;         // user score
-let timeLeft = 14400;  // 4 hours in seconds
-let timer;             // countdown timer
+let questions = [];         // will be filled dynamically from Gemini
+let index = 0;              // current question index
+let score = 0;              // user score
+let timeLeft = 14400;       // 4 hours in seconds
+let timer;                  // countdown timer
 
 // ----------------------
 // Firebase configuration
@@ -14,12 +14,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/fireba
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_FIREBASE_API_KEY",
-  authDomain: "YOUR_FIREBASE_AUTH_DOMAIN",
-  projectId: "YOUR_FIREBASE_PROJECT_ID",
-  storageBucket: "YOUR_FIREBASE_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_FIREBASE_MESSAGING_SENDER_ID",
-  appId: "YOUR_FIREBASE_APP_ID"
+  apiKey: "AIzaSyDAsQUSQIkwYpMe_t1P5DHcRvh93b1hHh4",
+  authDomain: "passv2-assessment-app-484cc.firebaseapp.com",
+  projectId: "passv2-assessment-app-484cc",
+  storageBucket: "passv2-assessment-app-484cc.firebasestorage.app",
+  messagingSenderId: "814919410709",
+  appId: "1:814919410709:web:017f29a9088e69c37c9a1c"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -46,7 +46,7 @@ async function login() {
     await signInWithEmailAndPassword(auth, email, password);
     document.getElementById("login").style.display = "none";
     document.getElementById("quiz").style.display = "block";
-    fetchQuestionsFromGemini(); // Fetch chapter 1 questions
+    fetchQuestionsFromGemini(); // Fetch 100 chapter 1 questions
   } catch (error) {
     alert("Error: " + error.message);
   }
@@ -58,6 +58,7 @@ async function login() {
 function startQuiz() {
   index = 0;
   score = 0;
+
   timer = setInterval(() => {
     timeLeft--;
     let hours = Math.floor(timeLeft / 3600);
@@ -105,26 +106,33 @@ function finishQuiz() {
 // ----------------------
 async function fetchQuestionsFromGemini() {
   try {
-    const response = await fetch("https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer AIzaSyBIilgDkFBoCCD6xPvowCx2QC8zdbVrNm0"
-      },
-      body: JSON.stringify({
-        "prompt": {
-          "text": "Generate 5 CPC exam-style multiple choice questions (chapter 1) with 3 options each. Return JSON array with 'q', 'options', 'answer' index."
+    const response = await fetch(
+      "https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer AIzaSyBIilgDkFBoCCD6xPvowCx2QC8zdbVrNm0"
         },
-        "temperature": 0.7,
-        "maxOutputTokens": 500
-      })
-    });
+        body: JSON.stringify({
+          prompt: {
+            text: "Generate 100 CPC exam-style multiple choice questions (chapter 1) with 3 options each. Return a JSON array with 'q', 'options', 'answer' index."
+          },
+          temperature: 0.7,
+          maxOutputTokens: 4000
+        })
+      }
+    );
 
     const data = await response.json();
-    // Example: data.candidates[0].content
-    // Parse JSON safely
+    // Parse safely
     questions = JSON.parse(data.candidates[0].content || "[]");
-    startQuiz();
+
+    if (questions.length === 0) {
+      alert("No questions returned from Gemini.");
+    } else {
+      startQuiz();
+    }
   } catch (error) {
     alert("Error fetching questions from Gemini: " + error.message);
   }
