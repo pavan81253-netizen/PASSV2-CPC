@@ -2,12 +2,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/fireba
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_APP.firebaseapp.com",
-  projectId: "YOUR_APP",
-  storageBucket: "YOUR_APP.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyDAsQUSQIkwYpMe_t1P5DHcRvh93b1hHh4",
+  authDomain: "passv2-assessment-app-484cc.firebaseapp.com",
+  projectId: "passv2-assessment-app-484cc",
+  storageBucket: "passv2-assessment-app-484cc.firebasestorage.app",
+  messagingSenderId: "814919410709",
+  appId: "1:814919410709:web:017f29a9088e69c37c9a1c",
+  measurementId: "G-69EDH4FLBL"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -73,3 +74,4 @@ function finishQuiz(){
   clearInterval(timer);
   document.getElementById("quiz").innerHTML=`<h2>Your Score: ${score}/${questions.length}</h2>`;
 }
+
