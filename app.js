@@ -1,18 +1,16 @@
 // ----------------------
-// Global variables
-// ----------------------
-let questions = [];       // will be filled dynamically from Gemini
-let index = 0;            // current question index
-let score = 0;            // user score
-let timeLeft = 14400;     // 4 hours in seconds
-let timer;                // countdown timer
-
-// ----------------------
-// Firebase configuration
+// Import Firebase SDK
 // ----------------------
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import { 
+  getAuth, 
+  createUserWithEmailAndPassword, 
+  signInWithEmailAndPassword 
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
+// ----------------------
+// Firebase Configuration
+// ----------------------
 const firebaseConfig = {
   apiKey: "AIzaSyDAsQUSQIkwYpMe_t1P5DHcRvh93b1hHh4",
   authDomain: "passv2-assessment-app-484cc.firebaseapp.com",
@@ -23,8 +21,18 @@ const firebaseConfig = {
   measurementId: "G-69EDH4FLBL"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
+// ----------------------
+// Global Variables
+// ----------------------
+let questions = [];
+let index = 0;
+let score = 0;
+let timeLeft = 14400; // 4 hours in seconds
+let timer;
 
 // ----------------------
 // User Authentication
@@ -34,9 +42,9 @@ async function signup() {
   const password = document.getElementById("password").value;
   try {
     await createUserWithEmailAndPassword(auth, email, password);
-    alert("Account created! Login now.");
+    alert("✅ Account created successfully! Please log in.");
   } catch (error) {
-    alert("Error: " + error.message);
+    alert("❌ Signup error: " + error.message);
   }
 }
 
@@ -47,9 +55,9 @@ async function login() {
     await signInWithEmailAndPassword(auth, email, password);
     document.getElementById("login").style.display = "none";
     document.getElementById("quiz").style.display = "block";
-    fetchQuestionsFromGemini(); // Fetch chapter 1 questions
+    fetchQuestionsFromGemini(); // Load questions dynamically
   } catch (error) {
-    alert("Error: " + error.message);
+    alert("❌ Login failed: " + error.message);
   }
 }
 
@@ -59,30 +67,31 @@ async function login() {
 function startQuiz() {
   index = 0;
   score = 0;
+  timeLeft = 14400; // Reset 4 hours
   timer = setInterval(() => {
     timeLeft--;
-    let hours = Math.floor(timeLeft / 3600);
-    let minutes = Math.floor((timeLeft % 3600) / 60);
-    let seconds = timeLeft % 60;
+    const hours = Math.floor(timeLeft / 3600);
+    const minutes = Math.floor((timeLeft % 3600) / 60);
+    const seconds = timeLeft % 60;
     document.getElementById("timer").innerText =
-      `Time left: ${hours}h ${minutes}m ${seconds}s`;
+      `⏳ Time left: ${hours}h ${minutes}m ${seconds}s`;
     if (timeLeft <= 0) finishQuiz();
   }, 1000);
-
   showQuestion();
 }
 
 // ----------------------
-// Show Question
+// Show Questions
 // ----------------------
 function showQuestion() {
   if (index >= questions.length) return finishQuiz();
-  let q = questions[index];
+  const q = questions[index];
   document.getElementById("question").innerText = q.q;
-  let optionsDiv = document.getElementById("options");
+  const optionsDiv = document.getElementById("options");
   optionsDiv.innerHTML = "";
+
   q.options.forEach((opt, i) => {
-    let btn = document.createElement("button");
+    const btn = document.createElement("button");
     btn.innerText = opt;
     btn.onclick = () => checkAnswer(i);
     optionsDiv.appendChild(btn);
@@ -98,11 +107,14 @@ function checkAnswer(selected) {
 
 function finishQuiz() {
   clearInterval(timer);
-  document.getElementById("quiz").innerHTML = `<h2>Your Score: ${score}/${questions.length}</h2>`;
+  document.getElementById("quiz").innerHTML = `
+    <h2>✅ Quiz Completed</h2>
+    <p>Your Score: ${score} / ${questions.length}</p>
+  `;
 }
 
 // ----------------------
-// Gemini API Integration
+// Fetch Questions from Gemini
 // ----------------------
 async function fetchQuestionsFromGemini() {
   try {
@@ -112,22 +124,43 @@ async function fetchQuestionsFromGemini() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer AIzaSyBIilgDkFBoCCD6xPvowCx2QC8zdbVrNm0" // Your Gemini API Key
+          "Authorization": "Bearer AIzaSyBIilgDkFBoCCD6xPvowCx2QC8zdbVrNm0"
         },
         body: JSON.stringify({
-          "prompt": {
-            "text": "Generate 100 CPC exam-style multiple choice questions (chapter 1) with 3 options each. Return JSON array with 'q', 'options', 'answer' index."
+          prompt: {
+            text: "Generate 100 CPC exam-style multiple choice questions (Chapter 1 - Evaluation and Management) with 3 options each and the correct answer index. Format output strictly as JSON array with fields 'q', 'options', and 'answer'."
           },
-          "temperature": 0.7,
-          "maxOutputTokens": 5000
+          temperature: 0.7,
+          maxOutputTokens: 2000
         })
       }
     );
 
     const data = await response.json();
-    questions = JSON.parse(data.candidates[0].content || "[]");
-    startQuiz();
+    let text = data?.candidates?.[0]?.output || data?.candidates?.[0]?.content || "[]";
+
+    try {
+      questions = JSON.parse(text);
+      if (!Array.isArray(questions) || questions.length === 0) {
+        throw new Error("Invalid question format received");
+      }
+      startQuiz();
+    } catch (err) {
+      alert("⚠️ Error parsing Gemini response. Using fallback sample questions.");
+      questions = [
+        { q: "What is ICD-10-CM?", options: ["Diagnosis coding system", "Procedure code", "Drug name"], answer: 0 },
+        { q: "How many chapters are in ICD-10-CM?", options: ["20", "21", "18"], answer: 1 }
+      ];
+      startQuiz();
+    }
+
   } catch (error) {
-    alert("Error fetching questions from Gemini: " + error.message);
+    alert("❌ Error fetching questions: " + error.message);
   }
 }
+
+// ----------------------
+// Expose Functions to HTML
+// ----------------------
+window.signup = signup;
+window.login = login;
