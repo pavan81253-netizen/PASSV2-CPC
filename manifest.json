@@ -1,9 +1,9 @@
 {
-  "name": "PASSV2 Practice App",
+  "name": "PASSV2 CPC Practice",
   "short_name": "PASSV2",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#2196f3",
-  "icons": []
+  "theme_color": "#1976d2",
+  "description": "Medical coding CPC practice — exam selection and timer"
 }
