@@ -1,0 +1,563 @@
+[
+  {
+    "q": "1. A patient who has deep vein thrombosis in the left forearm receives monitored anesthesia, personally performed by the anesthesiologist for a thrombectomy. The anesthesiologist documents P4. What anesthesia coding is reported?",
+    "options": ["01850-AA-QS-P4", "01840-AA-G8-P4", "01850-AA-G8-P4", "01840-AA-OS-P4"],
+    "answer": 2
+  },
+  {
+    "q": "2. The patient had a nonmagnetic metallic foreign body removed, a para plans lensectomy, and laceration of cornea procedure performed. Anesthesia was given by the anesthesiologist directing 1 CRNA. What anesthesia coding is reported?",
+    "options": ["00140-QY", "00140-AA", "00148-AA", "00148-QY"],
+    "answer": 3
+  },
+  {
+    "q": "3. MR 623654. Preoperative Diagnosis: Basal cell carcinoma. Postoperative Diagnosis: Same. Procedure described. What CPT coding is reported for this case?",
+    "options": ["14001", "15271", "14001, 11606-51", "14001, 11606-51, 12034-51"],
+    "answer": 3
+  },
+  {
+    "q": "4. MR 002754. Postoperative Diagnosis: Fracture of cervical vertebrae C6-C7. Procedure Performed: Placement of Halo Device. Anesthesia: General. What CPT and ICD-10-CM codes are reported?",
+    "options": ["20661, S13.170A", "20664, S12.9XXA", "20661, S12.500A, S12.600A", "20660, S12.501A, S12.601A"],
+    "answer": 3
+  },
+  {
+    "q": "5. MR 003264. Preoperative diagnoses: Cardiogenic shock, One day post op CABG. Postoperative diagnosis: Cardiac tamponade. Procedure described. What is the procedural coding?",
+    "options": ["35820-78", "32120-58", "32658-78", "33020-58"],
+    "answer": 0
+  },
+  {
+    "q": "6. Pre-Procedural Indications: Enterocolitis due to recurrent Clostridium difficile (C. Diff). Procedure: Fecal microbiota transplantation (FMT). What CPT and ICD-10-CM codes are reported?",
+    "options": ["0780T, A04.72", "0780T, 44799, A04.71", "44705, A04.72", "44705, 44799, A04.71"],
+    "answer": 2
+  },
+  {
+    "q": "7. MR 311876. Pre-op Diagnosis: Right Ureteral Stone. Procedures: Ureteroscopy Stone Extraction Using Lithotripsy; Cystoscopy, Ureteral Stent Placement. What CPT coding is reported?",
+    "options": ["52353-RT, 52332-RT", "52356-RT", "52320-RT, 52332-RT", "52356-RT, 52332-RT"],
+    "answer": 1
+  },
+  {
+    "q": "8. Preoperative Diagnosis: Chronic ETD in the right ear. Procedure: Myringotomy with insertion of pressure equalization tube, right. What CPT code is reported?",
+    "options": ["69421-RT", "69436-RT", "69433-RT", "69420-RT"],
+    "answer": 1
+  },
+  {
+    "q": "9. Radiology Report: X-ray lumbar spine (six views). Impression: Lumbar spondylosis at the L2-L3 and L3-L4 level. What CPT and ICD-10-CM codes are reported?",
+    "options": ["72084-26, M47.817, M54.50", "72114-26, M47.816", "72114-26, 72120-26, M47.817, M54.50", "72084-26, 72120-26, M47.816"],
+    "answer": 1
+  },
+  {
+    "q": "10. MR 065174 Established Patient Office Visit. Complaint: Bilateral thyroid nodules. Assessment: Multinodular goiter - percutaneous biopsy planned. What E/M code is reported?",
+    "options": ["99212", "99215", "99213", "99214"],
+    "answer": 3
+  },
+  {
+    "q": "11. Emergency Department Visit: Vomiting. Clinical Impression: Vomiting, diabetic ketoacidosis, probable diabetes insipidus. What E/M code is reported?",
+    "options": ["99285", "99291", "99291, 99292", "99222"],
+    "answer": 0
+  },
+  {
+    "q": "12. Emergency Department Visit: Shortness of breath and feeling weak. Impression: CHF - Stable; SOB and weakness - Resolved. What E/M code is reported?",
+    "options": ["99284", "99283", "99282", "99285"],
+    "answer": 0
+  },
+  {
+    "q": "13. What structure is connective tissue that surrounds, separates, and holds muscles, blood vessels, and nerves together in the body such as a band of tissue that connects your heel bone to the base of your toes?",
+    "options": ["Fascia", "Cartilage", "Ligaments", "Tendons"],
+    "answer": 0
+  },
+  {
+    "q": "14. What is done when a surgeon performs a bilateral oophorectomy?",
+    "options": ["Removal of both ovaries", "Laparoscopic removal of the uterus", "A sling procedure for vaginal prolapse", "Removal of both fallopian tubes"],
+    "answer": 0
+  },
+  {
+    "q": "15. Provider documents the patient has pruritus. This means:",
+    "options": ["Pus that is draining", "Profuse sweating", "Scar formation", "Localized or generalized itching"],
+    "answer": 3
+  },
+  {
+    "q": "16. Which one is an organ of the lymphatic system?",
+    "options": ["Pancreas", "Pineal gland", "Spleen", "Vas deferens"],
+    "answer": 2
+  },
+  {
+    "q": "17. The phalanges are bones found in the:",
+    "options": ["Chest", "Knee", "Wrist", "Feet and hands"],
+    "answer": 3
+  },
+  {
+    "q": "18. Which one of the following is an infection that occurs in the respiratory system?",
+    "options": ["Diverticulosis", "Meningitis", "Tuberculosis", "Endocarditis"],
+    "answer": 2
+  },
+  {
+    "q": "19. What are the structures that connect one bone to another bone, for example, the tibia to the femur at the knee?",
+    "options": ["Ligaments", "Tendons", "Cartilage", "Bursa"],
+    "answer": 0
+  },
+  {
+    "q": "20. What is urticaria commonly called?",
+    "options": ["Scarring", "Hives", "Hair loss", "Bruises"],
+    "answer": 1
+  },
+  {
+    "q": "21. What is done when a surgeon performs a bilateral oophorectomy?",
+    "options": ["A sling procedure for vaginal prolapse", "Laparoscopic removal of the uterus", "Removal of both ovaries", "Removal of both fallopian tubes"],
+    "answer": 2
+  },
+  {
+    "q": "22. The adrenal glands are found in which system?",
+    "options": ["Integumentary", "Nervous", "Lymphatic", "Endocrine"],
+    "answer": 3
+  },
+  {
+    "q": "23. Which one is an organ of the lymphatic system?",
+    "options": ["Spleen", "Vas deferens", "Pineal gland", "Pancreas"],
+    "answer": 0
+  },
+  {
+    "q": "24. A patient is complaining of muscle pain. A trigger point injection is given in the infraspinatus muscle in the rotator cuff to help relieve the pain. The muscle is injected in which anatomical location?",
+    "options": ["Shoulder", "Knee", "Upper back", "Neck"],
+    "answer": 0
+  },
+  {
+    "q": "25. Which of the following is classified as coronary arteries?",
+    "options": ["Pulmonary, Internal Carotid, Interosseous", "Aortic, Internal Carotid, Circumflex", "Renal, Internal Carotid, Interosseous", "Circumflex, Posterior Descending, Left Anterior Descending"],
+    "answer": 3
+  }
+]
+[
+  {
+    "q": "26. What does HIPAA stand for?",
+    "options": [
+      "Health Insurance Prospective and Accountability Act",
+      "Health Insured Patient and Accountable Act",
+      "Health Insured Payment and Accountable Act",
+      "Health Insurance Portability and Accountability Act"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "27. Federal healthcare plans include which payer?",
+    "options": ["Humana", "Meritain Health", "Medicaid", "Aetna"],
+    "answer": 2
+  },
+  {
+    "q": "28. Which one of the following is considered fraudulent?",
+    "options": [
+      "Misrepresenting the diagnosis to justify payment",
+      "Unintentionally billing for unnecessary medical services",
+      "Unknowingly misusing a code on a claim",
+      "Failure to maintain adequate medical or financial records"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "29. A therapeutic colonoscopy is performed, where the scope goes beyond the splenic flexure but not to the cecum. Using the Colonoscopy Decision Tree illustrated in the CPT code book, what coding is reported?",
+    "options": ["45330", "45379-45398 with modifier 52", "45378-53", "45331-45347"],
+    "answer": 2
+  },
+  {
+    "q": "30. According to CPT coding guidelines for obstetrical ultrasounds, which code represents a 'quick look' exam?",
+    "options": ["76805", "76815", "76816", "76801"],
+    "answer": 1
+  },
+  {
+    "q": "31. Which punctuation is used in the ICD-10-CM Alphabetic Index to enclose supplementary words that may be present or absent without affecting the code?",
+    "options": ["Brackets", "Colons", "Semicolon", "Parentheses"],
+    "answer": 3
+  },
+  {
+    "q": "32. Which statement is FALSE in reporting a personal history ICD-10-CM code?",
+    "options": [
+      "A personal history code is acceptable on any medical record regardless of the reason of the visit.",
+      "A personal history code is reported when the patient's condition is no longer present or being treated.",
+      "A personal history code can be reported as a first-listed code when the reason for encounter is for a screening.",
+      "A personal history code can be reported with follow-up codes."
+    ],
+    "answer": 0
+  },
+  {
+    "q": "33. Which statement is NOT true regarding ICD-10-CM coding guidelines for burns?",
+    "options": [
+      "The burns codes are also for burns resulting from electricity and radiation.",
+      "Necrosis of burned skin should be coded as a non-healed burn.",
+      "Sequence first the code that reflects the highest degree of burn when more than one burn is present.",
+      "If the patient has burns of varying degrees in the same anatomic site, assign separate codes for each degree burn."
+    ],
+    "answer": 3
+  },
+  {
+    "q": "34. Regarding the CPT Surgery Guidelines for a surgical code designated as a 'Separate Procedure,' which statement is FALSE?",
+    "options": [
+      "To identify a service designated as a 'separate procedure' that is reported with an unrelated primary service, append modifier 79.",
+      "When a procedure is designated as a separate procedure and carried out independently or unrelated from the total primary service, it may be reported.",
+      "The codes designated as 'separate procedure' should not be reported in addition to the code for the total procedure of which it is an integral component.",
+      "A service that is commonly carried out as an integral component of a total procedure is identified by the term 'separate procedure.'"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "35. When a provider's documentation refers to use, abuse, and dependence of the same substance (e.g., alcohol), which statement is correct?",
+    "options": [
+      "If both use and abuse are documented, assign abuse as the first code and use as the additional code.",
+      "If both use and dependence are documented, assign only the code for dependence.",
+      "If both abuse and dependence are documented, assign only the code for abuse.",
+      "If use, abuse, and dependence are documented, report all three codes separately."
+    ],
+    "answer": 1
+  },
+  {
+    "q": "36. A few days after a bad coughing spell, the patient developed dyspnea that is occurring episodically throughout the day and night. The physician suspects he has viral pneumonia and orders a chest X-ray. What is the ICD-10-CM coding reported?",
+    "options": ["R06.00", "J12.9, R06.00", "J12.9", "J18.9"],
+    "answer": 1
+  },
+  {
+    "q": "37. What is the ICD-10-CM code for a medial meniscus tear of the left knee due to a recent football injury?",
+    "options": ["S83.242A", "M23.204", "S83.232A", "M23.202"],
+    "answer": 0
+  },
+  {
+    "q": "38. A diabetic patient is to have a foot ulcer debrided. The physician examines her left foot and diagnoses a non-pressure ulcer on her midfoot where necrosis extends to the muscle. What ICD-10-CM coding is reported?",
+    "options": ["E11.621, L97.423", "L97.423, E10.8", "L97.428, E11.8", "E10.621, L97.428"],
+    "answer": 0
+  },
+  {
+    "q": "39. Male patient underwent a surgical procedure for extraction of a stone in the kidney or ureter. Upon examination, the surgeon found both kidneys to be free of stones but a stricture with hydronephrosis in one of the ureters. What ICD-10-CM coding is reported?",
+    "options": ["N13.2", "N13.1", "N13.1, N35.819", "N13.1, N13.30"],
+    "answer": 1
+  },
+  {
+    "q": "40. A patient is seen by a retinal specialist and is diagnosed with type 2 diabetic mild nonproliferative retinopathy with macular edema in both eyes. The diabetes is secondary to Cushing's syndrome. What ICD-10-CM codes are reported?",
+    "options": ["E08.3213, E24.9, Z79.84", "E24.9, E08.3213, Z79.84", "E24.9, E11.3213, Z79.84", "E11.3213, E24.9, Z79.84"],
+    "answer": 0
+  },
+  {
+    "q": "41. A patient with complex skin cancer on her neck undergoes a 2-stage Mohs Micrographic procedure. The first stage had 6 blocks, and the second stage had 5 blocks. Simple repair was necessary. What CPT codes are reported?",
+    "options": ["17311,17312,17315,12001", "17311,17312,12011", "17311,17312,17315,12011", "17311,17312,12001"],
+    "answer": 2
+  },
+  {
+    "q": "42. A patient presents to the dermatologist for removal of a malignant lesion on the upper lip. Laser surgery is used to destroy the 6 cm lesion. What CPT and ICD-10-CM coding is reported?",
+    "options": ["17000, C00.0", "17281, C00.2", "17000, C00.2", "17281, C00.0"],
+    "answer": 1
+  },
+  {
+    "q": "43. A patient presents with keratosis lesions on her left cheek, above the left eyebrow, and on the chin area. The dermatologist treats these areas by sanding the surface of 5 lesions. What CPT coding is reported?",
+    "options": ["15786 x5", "15786,15787", "15786,15787 x4", "15787 x5"],
+    "answer": 2
+  },
+  {
+    "q": "44. A surgeon performed Mohs micrographic surgery on a lesion on the right foot requiring two stages. Stage one had six tissue blocks and stage two had three tissue blocks. What CPT codes are reported?",
+    "options": ["17313,17315", "17311,17315", "17313,17314,17315", "17311,17312,17315"],
+    "answer": 2
+  },
+  {
+    "q": "45. A 30-year-old female is having suction-assisted lipectomy performed on her love handles and abdomen, plus bilateral breast augmentation. What are the correct codes for the surgery?",
+    "options": ["15830,19340-50", "15877,19325-50", "15877,19340-50", "15830,15847,15772-50"],
+    "answer": 2
+  },
+  {
+    "q": "46. A 25-year-old female is seen in the ED for multiple lacerations. Repairs are performed on the forehead, arms, and back. What CPT coding is reported for the repairs?",
+    "options": [
+      "99283-25,12032,12011,12002-59,12002-59",
+      "99283-25,12034,12002-59",
+      "99283-25,12034,12011,12002-59",
+      "99283-25,12032,12002-59"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "47. A patient is in the operating room for a planned partial meniscectomy of the TMJ, but after anesthesia the procedure is cancelled due to respiratory distress. What CPT coding is reported?",
+    "options": ["21060-47", "21060-52", "21060-74", "21060-53"],
+    "answer": 3
+  },
+  {
+    "q": "48. A patient had surgery a year ago to repair two extensor tendons in his wrist. He is in surgery for a secondary repair for the same two tendons with free graft. What CPT coding is reported?",
+    "options": ["25270 x2", "25270", "25272", "25274 x2"],
+    "answer": 2
+  },
+  {
+    "q": "49. A patient is diagnosed with compression fractures of the L2, L3 and L4 vertebrae. Kyphoplasty is performed bilaterally at these levels. What CPT coding is reported?",
+    "options": ["22514-50 x3", "22515 x3", "22514,22515 x2", "22514-50,22515-50 x2"],
+    "answer": 3
+  },
+  {
+    "q": "50. A 36-year-old male with degenerative disc disease at C3-C4 undergoes total disc arthroplasty via anterior approach. What CPT code is reported?",
+    "options": ["22856", "22551", "22861", "22808"],
+    "answer": 0
+  }
+]
+[
+  {
+    "q": "51. Kathy broke her wrist while hiking and a gauntlet cast was applied in the ER. She visits her primary care provider one month later to have the cast removed. What CPT code is reported for the primary care provider?",
+    "options": ["29584", "29280", "29700", "29705"],
+    "answer": 2
+  },
+  {
+    "q": "52. What CPT code is used for incision and drainage (I&D) of a superficial hematoma of the elbow?",
+    "options": ["10160", "10140", "23930", "23931"],
+    "answer": 1
+  },
+  {
+    "q": "53. A patient recently diagnosed with dysrhythmia undergoes ablation of the electric paths of the pulmonary veins in the left atrium. What CPT code is reported?",
+    "options": ["33250", "33254", "33261", "33256"],
+    "answer": 2
+  },
+  {
+    "q": "54. A 26-year-old male presents with a deep laceration from a kitchen knife to his right hand. The surgeon repairs the bleeding vessel with sutures after cleaning and checking blood flow. What CPT code is reported?",
+    "options": ["35702-RT", "35207-RT", "35206-RT", "35236-RT"],
+    "answer": 1
+  },
+  {
+    "q": "55. A patient arrives with stridor and respiratory distress. Microlaryngoscopy and bronchoscopy reveal subglottic web, stenosis, and collapse of trachea. What CPT coding is reported?",
+    "options": [
+      "31622, 31526-51, 69990",
+      "31622, 31526-51",
+      "31622, 69990",
+      "31629, 31526-51"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "56. A 65-year-old with lymphoma undergoes insertion of a tunneled central venous catheter via right subclavian vein under fluoroscopy. What CPT code is reported?",
+    "options": ["36558", "36556", "36569", "36561"],
+    "answer": 3
+  },
+  {
+    "q": "57. A 63-year-old patient requires ECMO for acute respiratory syndrome via open chest cannulation. What CPT codes are reported?",
+    "options": ["33954", "33956, 32100", "33956", "33954, 32100"],
+    "answer": 2
+  },
+  {
+    "q": "58. A catheter is placed into the aortic arch from the right femoral artery, then guided into the right common carotid for imaging of ipsilateral extracranial and bilateral external carotids. Which CPT codes are selected?",
+    "options": ["36225, 36227-51 × 2", "36222, 36227 × 2", "36224-50, 36227-51 × 2", "36223, 36227 × 2"],
+    "answer": 2
+  },
+  {
+    "q": "59. A patient presents for a percutaneous needle biopsy of the liver with ultrasound guidance to assess primary biliary cirrhosis. What CPT and ICD-10-CM codes are reported?",
+    "options": ["47000, K74.5", "47100, K74.5", "47000, 10005, 76942, K74.3", "47000, 76942, K74.3"],
+    "answer": 3
+  },
+  {
+    "q": "60. A 14-month-old male born with cleft lip and alveolar palate presents for reconstruction of the palate with bone graft. What CPT coding is reported?",
+    "options": ["42205", "42210, 20900", "42210", "42200, 20900"],
+    "answer": 1
+  },
+  {
+    "q": "61. A PEG placement is attempted but aborted due to technical difficulty; a small hiatal hernia is noted. What CPT and ICD-10-CM coding is reported?",
+    "options": ["43246, K94.29, Z93.1", "43830-52, Z43.1", "43246-53, K94.29, K44.9", "49450-53, K94.29, K44.9"],
+    "answer": 2
+  },
+  {
+    "q": "62. A 63-year-old male undergoes open repair of a recurrent incarcerated incisional hernia with prosthetic mesh insertion (12 cm). What CPT and ICD-10-CM codes are reported?",
+    "options": ["49596, 15778, K43.0", "49618, K43.0", "49618, 15778, K43.2", "49596, K43.2"],
+    "answer": 3
+  },
+  {
+    "q": "63. A patient is seen for nausea, vomiting, and right-lower abdominal pain. CT confirms acute appendicitis; an open appendectomy is performed. What CPT and ICD-10-CM codes are reported?",
+    "options": ["44970, K35.80", "44950, K35.890", "44950, K35.80", "44950, K35.80, R11.2, R10.31"],
+    "answer": 2
+  },
+  {
+    "q": "64. An 18-year-old female’s adenoids have regrown three years after initial procedure. What CPT code is reported?",
+    "options": ["42831", "42836", "42821", "42826"],
+    "answer": 1
+  },
+  {
+    "q": "65. Provider performs staged procedures for gender reassignment surgery converting male anatomy to female anatomy. What CPT code is reported?",
+    "options": ["58999", "55899", "55980", "55970"],
+    "answer": 3
+  },
+  {
+    "q": "66. A 42-year-old male with a left renal mass undergoes partial nephrectomy via open incision. What CPT code is reported?",
+    "options": ["50220", "50546", "50240", "50543"],
+    "answer": 0
+  },
+  {
+    "q": "67. A patient underwent cystourethroscopy with pyeloscopy to remove a ureteral calculus without stent insertion. What CPT coding is reported?",
+    "options": ["52352", "52353", "52356", "52352, 52351-51"],
+    "answer": 1
+  },
+  {
+    "q": "68. A patient presents for a planned sterilization via bilateral excisional vasectomy. What are the correct CPT and diagnosis codes?",
+    "options": ["55250, Z30.012", "55250, Z30.2", "55250-50, Z30.012", "55250-50, Z30.2"],
+    "answer": 3
+  },
+  {
+    "q": "69. A 22-year-old female comes in for removal of an intrauterine device (IUD). What CPT and ICD-10-CM codes are reported?",
+    "options": ["58301, Z30.432", "58300, Z30.431", "58301, Z30.433", "57160, Z30.430"],
+    "answer": 0
+  },
+  {
+    "q": "70. An 8-day-old newborn (3 kg) undergoes circumcision using a Gomco clamp without penile block. What CPT coding is reported?",
+    "options": ["54150", "54160-63", "54160", "54150-52"],
+    "answer": 2
+  },
+  {
+    "q": "71. There is a malfunction of a vagus nerve electrode array; the surgeon removes the array and pulse generator. What is the CPT coding for this procedure?",
+    "options": ["64569", "64570", "64568", "61888"],
+    "answer": 1
+  },
+  {
+    "q": "72. Ms. C is diagnosed with a supratentorial intracerebral hematoma; the neurologist performs a craniectomy and removes the hematoma. What CPT code is reported?",
+    "options": ["61314", "61313", "61312", "61154"],
+    "answer": 0
+  },
+  {
+    "q": "73. A patient undergoing thyroidectomy for malignancy on the right lobe also has a lesion on the left parathyroid gland, both removed. What CPT codes are reported?",
+    "options": ["60505, 60220-59", "60505, 60240-59", "60500, 60210-59", "60500, 60220-59"],
+    "answer": 0
+  },
+  {
+    "q": "74. A 7-year-old boy with ear discomfort and loss of hearing is diagnosed with impacted cerumen. Cerumen removed by irrigation on right ear and by instrumentation on left ear. What CPT codes are reported?",
+    "options": ["69209-50", "69209-RT, 69210-LT", "69209-LT, 69210-RT", "69210-50"],
+    "answer": 1
+  },
+  {
+    "q": "75. A 32-year-old male with keratoconus in the left eye undergoes corneal collagen cross-linking to stabilize the cornea. What CPT coding is reported?",
+    "options": ["0402T", "65435, 04027, 69990", "0402T, 69990", "65435"],
+    "answer": 0
+  }
+]
+[
+  {
+    "q": "76. A 53-year-old male suffered severe ocular trauma to the right eye due to a metallic item penetration. The surgeon removes the metallic foreign body, sutures the corneal laceration, and performs a pars plana lensectomy. What CPT and ICD-10-CM codes are reported?",
+    "options": [
+      "65265-RT, 66852-51-RT, 65280-51-RT, S05.51XA, W31.1XXA",
+      "65235-RT, 66852-51-RT, 65275-51-RT, S05.51XA, W31.1XXA",
+      "65265-RT, 66852-51-RT, 65275-51-RT, S05.31XA, W31.0XXA",
+      "65235-RT, 66852-51-RT, 65280-51-RT, S05.31XA, W31.0XXA"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "77. A patient with frontal lobe brain cancer undergoes nuclear diagnostic imaging of the brain using gamma-emitting tracers. Four static views of the brain are taken. What radiology code is reported?",
+    "options": ["78600", "78605 x 4", "78600 x 4", "78605"],
+    "answer": 3
+  },
+  {
+    "q": "78. A patient with chronic venous embolism in the superior vena cava undergoes a radiographic study with catheter insertion and imaging. What codes are reported for this procedure?",
+    "options": ["36010, 75825-26", "36010, 75827-26", "36000, 75825-26", "36000, 75827-26"],
+    "answer": 0
+  },
+  {
+    "q": "79. A patient has X-ray imaging of the entire spine after a fall, including lumbar, thoracic, and cervical spine views (8 total). What CPT code is reported?",
+    "options": ["72114", "72081 x 8", "72084", "72020"],
+    "answer": 2
+  },
+  {
+    "q": "80. Mrs. Wilder presents with swelling in both legs. Venous thrombosis imaging of each leg shows deep venous embolism and thrombosis. What CPT and ICD-10-CM codes are reported?",
+    "options": [
+      "78457-RT, 78457-LT, I82.401, I82.402",
+      "78458, I82.403",
+      "78457-50, I82.403",
+      "74858-50, I82.401, I82.402"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "81. A patient undergoes abdominal X-ray imaging with decubitus, supine, and erect views. What CPT code is reported?",
+    "options": ["74018-26", "74019-26", "74022-26", "74021-26"],
+    "answer": 2
+  },
+  {
+    "q": "82. A physician performs a liver biopsy under ultrasound guidance, obtaining two core samples. What CPT codes are reported?",
+    "options": ["47000, 76942", "47000, 77012", "47001, 77002", "47000, 47001, 76942"],
+    "answer": 0
+  },
+  {
+    "q": "83. A patient presents with dysuria and lower abdominal pain. Urinalysis with microscopy is performed and is negative. What CPT and ICD-10-CM codes are reported?",
+    "options": ["81002, N39.0", "81000, N39.0, R30.0, R10.30", "81001, R30.0, R10.30", "81002, R30.0, R10.30"],
+    "answer": 3
+  },
+  {
+    "q": "84. A 27-year-old male dies of a gunshot wound. A forensic autopsy is performed for legal investigation. What CPT code is reported?",
+    "options": ["88005", "88040", "88025", "88045"],
+    "answer": 1
+  },
+  {
+    "q": "85. A patient with jaundice undergoes multiple liver-related lab tests including albumin, bilirubin (total/direct), alkaline phosphatase, total protein, ALT, AST, and creatinine. What CPT coding is reported?",
+    "options": [
+      "82040, 82247, 82248, 84075, 84155, 84460, 84450, 82565",
+      "80076, 82565",
+      "80076",
+      "80076-22"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "86. Pathology received four core biopsy fragments of the liver. After special staining, minimal portal lymphocytic infiltrate was found. What CPT codes are reported?",
+    "options": ["88305, 88312, 88319 x 2", "88307, 88313, 88319", "88307, 88312, 88313 x 2", "88307, 88313 x 2, 88319"],
+    "answer": 3
+  },
+  {
+    "q": "87. A suppression study includes five glucose and five human growth hormone tests. What CPT coding is reported?",
+    "options": ["80430, 82947, 83003", "80430, 82947 x 5, 83003 x 5", "80430, 82947 x 2, 83003", "82947 x 5, 83003 x 5"],
+    "answer": 1
+  },
+  {
+    "q": "88. A 5-year-old child undergoes an allergy test using a quantitative fluorescent enzyme immunoassay for peanut components. What lab test is reported?",
+    "options": ["86008", "86001", "86003", "86005"],
+    "answer": 2
+  },
+  {
+    "q": "89. A 46-year-old patient undergoing upper GI endoscopy receives moderate sedation (65 minutes) administered by the same physician. What CPT coding is reported?",
+    "options": ["99152, 99153-51", "99152, 99153 x 3", "99156, 99157-51", "99156, 99157 x 3"],
+    "answer": 1
+  },
+  {
+    "q": "90. A urologist performs repeat evaluations for acute post-traumatic renal failure during peritoneal dialysis. What CPT code is reported?",
+    "options": ["99601", "99601, 99602", "90945", "90947"],
+    "answer": 2
+  },
+  {
+    "q": "91. A 78-year-old patient with chronic obstructive asthma and exacerbation undergoes spirometry in her pulmonologist's office. What CPT code is reported?",
+    "options": ["94010", "94060", "94620", "94640"],
+    "answer": 1
+  },
+  {
+    "q": "92. A 25-year-old female presents with scalp laceration requiring sutures and 7 cm layered closure on right forearm. What CPT coding is reported?",
+    "options": ["12011, 12032", "12011, 12002", "12002, 12002", "12032, 12002"],
+    "answer": 0
+  },
+  {
+    "q": "93. A 70-year-old male undergoes carotid endarterectomy with patch angioplasty. What CPT code is reported?",
+    "options": ["35301", "35321", "35390", "35301, 35321"],
+    "answer": 0
+  },
+  {
+    "q": "94. A female patient has a biopsy of the cervix performed during a Pap smear. What CPT code is reported?",
+    "options": ["57500", "57505", "57510", "57511"],
+    "answer": 1
+  },
+  {
+    "q": "95. A patient undergoes arthroscopic surgery on the right knee for meniscectomy and debridement. What CPT code(s) are reported?",
+    "options": ["29881", "29880", "29882", "29880, 29881"],
+    "answer": 1
+  },
+  {
+    "q": "96. A 50-year-old male undergoes cataract surgery with intraocular lens insertion. What CPT code should be reported?",
+    "options": ["66984", "66982", "66983", "66985"],
+    "answer": 0
+  },
+  {
+    "q": "97. A 62-year-old female undergoes open repair of an abdominal aortic aneurysm. What CPT code is reported?",
+    "options": ["35081", "35091", "35081, 35091", "35102"],
+    "answer": 0
+  },
+  {
+    "q": "98. An 18-year-old female has an MRI of the brain with and without contrast. What CPT code(s) are reported?",
+    "options": ["70553", "70551", "70552", "70553, 70552"],
+    "answer": 0
+  },
+  {
+    "q": "99. A male patient has a colonoscopy with biopsy performed. What CPT code is reported?",
+    "options": ["45380", "45378", "45379", "45381"],
+    "answer": 0
+  },
+  {
+    "q": "100. A patient is seen in the office for diabetic foot ulcer care with debridement. What CPT code is reported?",
+    "options": ["11042", "11043", "11044", "11045"],
+    "answer": 0
+  }
+]
