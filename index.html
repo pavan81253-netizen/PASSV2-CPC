@@ -1,92 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PASSV2 Medical Coding Practice</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PASSV2 — Medical Coding Practice</title>
+  <link rel="manifest" href="manifest.json">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #00bcd4, #2196f3);
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-    }
-    h1 {
-      margin-top: 30px;
-      font-size: 24px;
-    }
-    .container {
-      background: white;
-      color: black;
-      width: 90%;
-      max-width: 400px;
-      margin: 50px auto;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    input {
-      width: 90%;
-      padding: 10px;
-      margin: 8px 0;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background-color: #2196f3;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 10px 20px;
-      cursor: pointer;
-      margin: 5px;
-      font-size: 16px;
-    }
-    button:hover {
-      background-color: #0b7dda;
-    }
-    #quiz {
-      display: none;
-      background: white;
-      color: black;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    #timer {
-      color: red;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    #options button {
-      display: block;
-      width: 100%;
-      margin: 8px 0;
-      text-align: left;
-    }
+    body { font-family: Arial, Helvetica, sans-serif; background:#f4f6fb; color:#111; padding:20px; }
+    .card { max-width:760px; margin:22px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
+    h1 { text-align:center; margin:0 0 18px; }
+    .row { display:flex; gap:12px; align-items:center; margin-bottom:12px; }
+    input[type=email], input[type=password], select { width:100%; padding:10px; border-radius:6px; border:1px solid #ddd; }
+    button { padding:10px 16px; border:none; border-radius:6px; background:#1976d2; color:#fff; cursor:pointer; }
+    button.secondary { background:#6b7280; }
+    #quiz { display:none; margin-top:16px; }
+    #options button { display:block; width:100%; margin:8px 0; text-align:left; padding:10px; border-radius:6px; border:1px solid #ddd; background:#fff; cursor:pointer; }
+    #timer { font-weight:600; color:#d32f2f; margin-bottom:8px; }
+    .center { text-align:center; }
+    .small { font-size:13px; color:#666; }
   </style>
 </head>
 <body>
+  <div class="card">
+    <h1>PASSV2 Medical Coding Practice</h1>
 
-  <h1>PASSV2 Medical Coding Practice</h1>
+    <!-- Login area -->
+    <div id="login">
+      <div class="row">
+        <input id="email" type="email" placeholder="Email (example: student@example.com)" />
+      </div>
+      <div class="row">
+        <input id="password" type="password" placeholder="Password" />
+      </div>
+      <div class="row">
+        <button onclick="login()">Login</button>
+        <button class="secondary" onclick="signup()">Sign Up</button>
+      </div>
 
-  <div id="login" class="container">
-    <input type="email" id="email" placeholder="Email" /><br />
-    <input type="password" id="password" placeholder="Password" /><br />
-    <button onclick="login()">Login</button>
-    <button onclick="signup()">Sign Up</button>
-  </div>
+      <hr style="margin:16px 0" />
 
-  <div id="quiz">
-    <div id="timer">⏳ Time left: 4h 0m 0s</div>
-    <h2 id="question">Loading question...</h2>
-    <div id="options"></div>
+      <div class="small center">Select exam set (after login you can start the selected exam)</div>
+      <div class="row" style="margin-top:8px;">
+        <select id="examSelect">
+          <option value="exam1.json">Exam 1 (Provided)</option>
+          <option value="exam2.json">Exam 2 (Placeholder)</option>
+          <option value="exam3.json">Exam 3 (Provided)</option>
+          <option value="exam4.json">Exam 4 (Placeholder)</option>
+        </select>
+        <button onclick="startSelectedExam()">Start Selected Exam</button>
+      </div>
+
+      <p class="small">Notes: Exam files are loaded from the same folder (exam1.json, exam2.json, ...). Replace JSON files with your 100-question files when ready.</p>
+    </div>
+
+    <!-- Quiz area -->
+    <div id="quiz">
+      <div id="timer">⏳ Time left: --</div>
+      <div id="question" style="font-weight:600; margin-bottom:8px;">Question will appear here</div>
+      <div id="options"></div>
+
+      <div style="margin-top:12px; display:flex; gap:8px;">
+        <button onclick="prevQuestion()" class="secondary">Previous</button>
+        <button onclick="nextQuestion()" class="secondary">Next</button>
+        <button onclick="finishQuiz()">Submit</button>
+      </div>
+      <div id="result" style="margin-top:18px;"></div>
+    </div>
   </div>
 
   <script type="module" src="app.js"></script>
